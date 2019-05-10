@@ -1,0 +1,21 @@
+<mat-accordion >
+  <mat-expansion-panel *ngIf="city" >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Ciudad
+      </mat-panel-title>
+      <mat-panel-description>
+        {{city.name}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-list>
+      <mat-list-item>Pais - {{ city.sys.country }}</mat-list-item>
+      <mat-list-item>Latitud - {{ city.coord.lat }}</mat-list-item>
+      <mat-list-item>Longitud - {{ city.coord.lon }}</mat-list-item>
+      <mat-list-item>Tiempo - {{ city.weather[0].description }}</mat-list-item>
+      <mat-list-item>Viento - velocidad: {{ city.wind.speed }} grados: {{ city.wind.deg }}°</mat-list-item>
+      <mat-list-item>Temperatura - {{ city.main.temp }}</mat-list-item>
+      <mat-list-item>Humedad {{ city.main.humidity }}</mat-list-item>
+    </mat-list>
+  </mat-expansion-panel>
+</mat-accordion>

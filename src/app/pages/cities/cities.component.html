@@ -1,0 +1,13 @@
+<p>
+  Busca tu cuidad
+</p>
+<form [formGroup]="form" (ngSubmit)="search()">
+  <mat-form-field>
+    <input matInput placeholder="Cuidad" formControlName="name">
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">Buscar</button>
+</form>
+
+<app-list-cities [city]="city"></app-list-cities>
+
+<h3 *ngIf="notFound"> No se encontro la ciudad, intente de nuevo! </h3>
